@@ -1,0 +1,323 @@
+[
+  {
+      "questionText": "7x + 2x = ?",
+      "choiceA": "9x",
+  "choiceB": "9x\u00B2",
+  "choiceC": "2x + 9",
+  "choiceD": "x\u00B2 + 9",
+  "answerKey": "9x"
+  },
+  {
+     "questionText": "-x + x = ?",
+      "choiceA": "-2x",
+  "choiceB": "2x",
+  "choiceC": "x\u00B2",
+  "choiceD": "0",
+  "answerKey": "0"
+  },
+  {
+     "questionText": "y\u00B2 - y\u00B2 = ?",
+      "choiceA": "0",
+  "choiceB": "y\u2074",
+  "choiceC": "y",
+  "choiceD": "-y\u2074",
+  "answerKey": "0"
+  },
+  {
+     "questionText": "5x - 11x + 2 = ?",
+      "choiceA": "4x",
+  "choiceB": "-6x + 2",
+  "choiceC": "6x + 2",
+  "choiceD": "-4x",
+  "answerKey": "-6x + 2"
+  },
+  {
+     "questionText": "-z + z +z - z + 1 = ?",
+      "choiceA": "1",
+  "choiceB": "2z + 1",
+  "choiceC": "-z + 1",
+  "choiceD": "-1",
+  "answerKey": "1"
+  },
+{
+    "questionText": "2u + -7u",
+  "choiceA": "5u",
+  "choiceB": "-5u",
+  "choiceC": "-9u",
+  "choiceD": "9u",
+    "answerKey": "-5u"
+  },
+  {
+    "questionText": "-a\u00B2 + 3a\u00B2",
+   "choiceA": "-2a\u2074",
+  "choiceB": "2a\u00B2",
+  "choiceC": "-2a\u00B2",
+  "choiceD": "-4a\u2074",
+    "answerKey": "2a\u00B2"
+  },
+  {
+    "questionText": "6x + 14",
+   "choiceA": "20x",
+  "choiceB": "20",
+  "choiceC": "6x + 14",
+  "choiceD": "14x +6",
+    "answerKey": "6x + 14"
+  },
+  {
+    "questionText": "-4m + -5m",
+   "choiceA": "-9m",
+  "choiceB": "-m",
+  "choiceC": "9m",
+  "choiceD": "m",
+    "answerKey": "-9m"
+  },
+  {
+    "questionText": "-3c\u00B3 + c\u00B3",
+    "choiceA": "-2c\u00B3",
+  "choiceB": "2c\u00B3",
+  "choiceC": "2c\u2076",
+  "choiceD": "-2c\u2076",
+    "answerKey": "-2c\u00B3"
+  },
+  {
+    "questionText": "9p\u2074 + 2p\u2076",
+   "choiceA": "11p\u00B9\u2070",
+  "choiceB": "2p\u2074 + 9p\u2076",
+  "choiceC": "2p\u2076 + 9p\u2074",
+  "choiceD": "11",
+    "answerKey": "2p\u2076 + 9p\u2074"
+  },
+  {
+    "questionText": "-t + -2t",
+   "choiceA": "3t",
+  "choiceB": "-3t",
+  "choiceC": "t",
+  "choiceD": "-t",
+    "answerKey": "-3t"
+  },
+  {
+    "questionText": "17v + -17v",
+     "choiceA": "-34v",
+  "choiceB": "-v",
+  "choiceC": "v",
+  "choiceD": "0",
+    "answerKey": "0"
+  },
+  {
+    "questionText": "7z\u2075 + 4z\u2075",
+     "choiceA": "-11z\u00B9\u2070",
+  "choiceB": "11z\u2075",
+  "choiceC": "7z\u2075 + 4z\u2075",
+  "choiceD": "11z\u00B9\u2070",
+    "answerKey": "11z\u2075"
+  },
+  {
+    "questionText": "-21 + -8k",
+    "choiceA": "-8k-21",
+  "choiceB": "-29k",
+  "choiceC": "29k",
+  "choiceD": "-13k",
+    "answerKey": "-8k-21"
+  },
+{
+    "questionText": "-ab + 4ab",
+    "choiceA": "3ab",
+  "choiceB": "-3ab",
+  "choiceC": "5ab",
+  "choiceD": "-5ab",
+    "answerKey": "3ab"
+  },
+  {
+    "questionText": "5m\u00B3 + -22n\u00B3",
+   "choiceA": "17m\u00B3n\u00B3",
+  "choiceB": "-17m\u00B3n\u00B3",
+  "choiceC": "5m\u00B3 - 22n\u00B3",
+  "choiceD": "-5m\u00B3 - 22n\u00B3",
+    "answerKey": "5m\u00B3 - 22n\u00B3"
+  },
+  {
+    "questionText": "-4pq\u00B2r + -2pq\u00B2r",
+   "choiceA": "-2pq\u00B2r",
+  "choiceB": "6pq\u00B2r",
+  "choiceC": "-6pq\u00B2r",
+  "choiceD": "-6pq\u2074r",
+    "answerKey": "-6pq\u00B2r"
+  },
+  {
+    "questionText": "2x\u00B3y\u00B2 + 6x\u00B3y\u00B2",
+   "choiceA": "8x\u2076y\u2074",
+  "choiceB": "8xy\u00B3\u00B2",
+  "choiceC": "-8x\u00B3y\u00B2",
+  "choiceD": "4x\u00B3y\u00B2",
+    "answerKey": "8x\u00B3y\u00B2"
+  },
+  {
+    "questionText": "3u + -3uv",
+    "choiceA": "-3u\u00B2v",
+  "choiceB": "3u\u00B2v",
+  "choiceC": "3uv - 3u",
+  "choiceD": "-3uv + 3u",
+    "answerKey": "-3uv + 3u"
+  },
+  {
+    "questionText": "-17rs\u00B3t\u00B3 + -12rs\u00B3t\u00B3",
+   "choiceA": "29rs\u00B3t\u00B3",
+  "choiceB": "-29rs\u00B3t\u00B3",
+  "choiceC": "29rs\u2076t\u2076",
+  "choiceD": "-29rs\u2076t\u2076",
+    "answerKey": "-29rs\u00B3t\u00B3"
+  },
+  {
+    "questionText": "15c\u00B3d + 25c\u00B3d",
+    "choiceA": "40c\u2076d",
+  "choiceB": "40c\u00B3d",
+  "choiceC": "40cd\u00B3",
+  "choiceD": "40cd\u00B3",
+    "answerKey": "40c\u00B3d"
+  },
+  {
+    "questionText": "-5 + 8h",
+  "choiceA": "-3h",
+  "choiceB": "-13h",
+  "choiceC": "5 - 8h",
+  "choiceD": "-5 + 8h",
+    "answerKey": "-5 + 8h"
+  },
+  {
+    "questionText": "11y\u00B2z\u2075 + -z\u2076",
+   "choiceA": "-11y\u00B2z\u2075 - z\u2076",
+  "choiceB": "11y\u00B2z\u2075 - z\u2076",
+  "choiceC": "-11y\u00B2z\u2075 + z\u2076",
+  "choiceD": "-11y\u00B2z\u2075 - z\u2076",
+    "answerKey": "11y\u00B2z\u2075 - z\u2076"
+  },
+  {
+    "questionText": "b\u00B2cd\u2074 + b\u00B2cd\u2074",
+   "choiceA": "2b\u2074cd\u2078",
+  "choiceB": "2b\u00B2cd\u2074",
+  "choiceC": "2b\u00B22cd\u2074",
+  "choiceD": "b\u00B2cd\u2074 + b\u00B2cd\u2074",
+    "answerKey": "2b\u00B2cd\u2074"
+  },
+ {
+    "questionText": "6x\u00B2y + 3x\u00B2y + x\u00B2y",
+   "choiceA": "10x\u2076y",
+  "choiceB": "-10x\u2076y",
+  "choiceC": "6x\u00B2y + 3x\u00B2y + x\u00B2y",
+  "choiceD": "10x\u00B2y",
+    "answerKey": "10x\u00B2y"
+  },
+  {
+    "questionText": "-2str\u00B3 + -9str\u00B3 + 3str\u00B3",
+       "choiceA": "-8str\u00B3",
+  "choiceB": "8str\u00B3",
+  "choiceC": "-8s\u00B3t\u00B3r\u2079",
+  "choiceD": "8s\u00B3t\u00B3r\u2079",
+    "answerKey": "-8str\u00B3"
+  },
+  {
+    "questionText": "-24ab\u2076c + 4ab\u2076c + 6ab\u2076c",
+     "choiceA": "14ab\u2076c",
+  "choiceB": "-14ab\u2076c",
+  "choiceC": "-14a\u00B3b\u2076c\u00B3",
+  "choiceD": "14a\u00B3b\u2076c\u00B3",
+    "answerKey": "-14ab\u2076c"
+  },
+  {
+    "questionText": "10uv\u2074 + -uv\u2074 + 8uv\u2074",
+    "choiceA": "48a\u00B2b+36ab-60ab\u00B2",
+  "choiceB": "48a\u00B2b+36ab+60ab\u00B2",
+  "choiceC": "-48a\u00B2b-36ab-60ab\u00B2",
+  "choiceD": "48a\u00B2b-36ab-60ab\u00B2",
+    "answerKey": "48a\u00B2b-36ab-60ab\u00B2"
+  },
+  {
+    "questionText": "-5pq\u00B3 + 15pq + -3pq\u00B3",
+   "choiceA": "-8pq\u00B3 - 15pq",
+  "choiceB": "8pq\u00B3 - 15pq",
+  "choiceC": "-8pq\u00B3 + 15pq",
+  "choiceD": "8pq\u00B3 + 15pq",
+    "answerKey": "-8pq\u00B3 + 15pq"
+  },
+  {
+    "questionText": "7xyz + -12xy + -z",
+    "choiceA": "7xyz + 12xy + z",
+  "choiceB": "7xyz + 12xy - z",
+  "choiceC": "-20x\u00B2y\u00B2z\u00B2",
+  "choiceD": "7xyz - 12xy - z",
+    "answerKey": "7xyz - 12xy - z"
+  },
+  {
+    "questionText": "11mn + 6mn + -4mn",
+     "choiceA": "21mn",
+  "choiceB": "13mn",
+  "choiceC": "21m\u00B3n\u00B3",
+  "choiceD": "13m\u00B3n\u00B3",
+    "answerKey": "13mn"
+  },
+  {
+    "questionText": "-2c\u00B2d\u2075 + -8c\u00B2d\u2075 + -8c\u00B2d\u2075",
+      "choiceA": "18c\u00B2d\u2075",
+  "choiceB": "-18c\u00B2d\u2075",
+  "choiceC": "-2c\u00B2d\u2075",
+  "choiceD": "2c\u00B2d\u2075",
+    "answerKey": "-18c\u00B2d\u2075"
+  },
+  {
+    "questionText": "3a\u00B3 + 2a\u2076 + 6a\u2076",
+      "choiceA": "8a\u20763a\u00B3",
+  "choiceB": "8a\u00B9\u20703a\u00B3",
+  "choiceC": "8a\u2076 + 3a\u00B3",
+  "choiceD": "11a\u2076a\u00B3",
+    "answerKey": "8a\u2076 + 3a\u00B3"
+  },
+  {
+    "questionText": "-x\u00B3 + 10 + -2x\u00B3",
+     "choiceA": "-3x\u00B3 + 10",
+  "choiceB": "3x\u00B3 - 10",
+  "choiceC": "-3x\u00B3 - 10",
+  "choiceD": "3x\u00B3 + 10",
+    "answerKey": "-3x\u00B3 + 10"
+  },
+{
+    "questionText": "4u\u2074 - 14 + -4u\u2074",
+     "choiceA": "14",
+  "choiceB": "-14",
+  "choiceC": "14u\u2074",
+  "choiceD": "-14u\u2074",
+    "answerKey": "-14"
+  },
+  {
+    "questionText": "s\u00B2 + -2s\u00B2 - 6s\u00B3",
+   "choiceA": "6s\u00B3 - s\u00B2",
+  "choiceB": "6s\u00B3 + s\u00B2",
+  "choiceC": "-6s\u00B3 - s\u00B2",
+  "choiceD": "-6s\u00B3 + s\u00B2",
+    "answerKey": "-6s\u00B3 - s\u00B2"
+  },
+  {
+    "questionText": "7 + -9t - 7",
+  "choiceA": "-9t",
+  "choiceB": "-9t + 7",
+  "choiceC": "-9t - 14",
+  "choiceD": "9t",
+    "answerKey": "-9t"
+  },
+  {
+    "questionText": "8b\u00B3 - 11b\u2074 + 3b\u00B3",
+    "choiceA": "11b\u2074 + 5b\u00B3",
+  "choiceB": "11b\u2074 - 11b\u00B3",
+  "choiceC": "-11b\u2074 + 5b\u00B3",
+  "choiceD": "-11\u2074 + 11b\u00B3",
+    "answerKey": "-11b\u2074 + 11b\u00B3"
+  },
+  {
+    "questionText": "-9 + 2 + 12z\u00B3",
+    "choiceA": "12z\u00B3 + 7",
+  "choiceB": "12z\u00B3 - 11",
+  "choiceC": "5z\u00B3",
+  "choiceD": "12z\u00B3 - 7",
+    "answerKey": "12z\u00B3 - 7"
+  }
+
+]

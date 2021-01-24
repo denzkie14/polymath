@@ -1,0 +1,141 @@
+name: polymath
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  audioplayers: 
+  carousel_pro: ^1.0.0
+  cupertino_icons: ^1.0.0
+  flame: ^0.28.0
+  giffy_dialog: ^1.8.0
+  shared_preferences: ^0.5.12+4
+  spritewidget: 
+  toast: ^0.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/audio/sfx/playing.mp3
+    - assets/audio/sfx/failed.mp3
+    - assets/audio/sfx/levelup.mp3
+    - assets/audio/sfx/mainmusic.mp3
+    - assets/audio/sfx/correct.mp3
+    - assets/audio/sfx/wrong.mp3
+    - assets/json/drill.json
+    - assets/json/pop.json
+    - assets/img/correct.png
+    - assets/img/wrong.png
+    - assets/img/questionbutton.png
+    - assets/img/questionboard.png
+    - assets/images/bg/mainwall.png
+    - assets/images/bg/bg-underwater.jpg
+    - assets/images/bg/drillbg.jpg
+    - assets/images/popme/coin1.png
+    - assets/images/popme/coin2.png
+    - assets/images/popme/coin3.png
+    - assets/images/popme/coin4.png
+    - assets/images/popme/coin5.png
+    - assets/images/popme/coin6.png
+    - assets/images/popme/bubble-blue.png
+    - assets/images/popme/bubble-green.png
+    - assets/images/popme/bubble-orange.png
+    - assets/images/popme/bubble-purple.png
+    - assets/images/popme/bubble-red.png
+    - assets/images/popme/bubble-white.png
+    - assets/images/popme/bubble-yellow.png
+    - assets/img/dialoggif.gif
+    - assets/img/addition/tutor-add-1.jpg
+    - assets/img/addition/tutor-add-2.jpg
+    - assets/img/addition/tutor-add-3.jpg
+    - assets/img/addition/tutor-add-4.jpg
+    - assets/img/addition/tutor-add-5.jpg
+    - assets/img/addition/tutor-add-6.jpg
+    - assets/img/subtraction/tutor-subtract-1.jpg
+    - assets/img/subtraction/tutor-subtract-2.jpg
+    - assets/img/subtraction/tutor-subtract-3.jpg
+    - assets/img/subtraction/tutor-subtract-4.jpg
+    - assets/img/multiplication/tutor-multiply-1.jpg
+    - assets/img/multiplication/tutor-multiply-2.jpg
+    - assets/img/multiplication/tutor-multiply-3.jpg
+    - assets/img/multiplication/tutor-multiply-4.jpg
+    - assets/img/multiplication/tutor-multiply-5.jpg
+    - assets/img/multiplication/tutor-multiply-6.jpg
+    - assets/img/division/tutor-divide-1.jpg
+    - assets/img/division/tutor-divide-2.jpg
+    - assets/audio/sfx/pop.mp3
+    - assets/audio/sfx/bubble.mp3
+    - assets/audio/sfx/points.mp3
+    - assets/images/bg/failed.png
+    - assets/images/branding/title.png
+    - assets/images/ui/credits.png
+    - assets/images/ui/help.png
+    - assets/images/ui/icon-credits.png
+    - assets/images/ui/icon-help.png
+    - assets/images/ui/start-button.png
+    - assets/images/ui/question.png
+    - assets/images/ui/developer.png
+    - assets/images/ui/start.png
+    - assets/images/ui/exit.png
+    - assets/images/ui/info.png
+    - assets/images/ui/music-on.png
+    - assets/images/ui/music-off.png
+    - assets/images/ui/fx-on.png
+    - assets/images/ui/fx-off.png
+    - assets/images/ui/button.png
+    - assets/images/ui/btn-drill.png
+    - assets/images/ui/btn-tutorial.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
