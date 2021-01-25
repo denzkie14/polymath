@@ -48,7 +48,6 @@ class _DrillState extends State<Drill> {
 
   Timer _timer;
 
-
   Future<String> loadDrill() async {
     var jsonQuestions = await rootBundle.loadString('assets/json/drill.json');
     setState(() {
@@ -71,294 +70,318 @@ class _DrillState extends State<Drill> {
     super.initState();
     startTimer();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return WillPopScope(
         onWillPop: () async => false,
-        
         child: Scaffold(
           body: Stack(
+            //fit: StackFit.loose,
             children: <Widget>[
-                Center(
-                      child: new Image.asset(
-              'assets/images/bg/drillbg.jpg',
-              width: size.width,
-              height: size.height,
-              fit: BoxFit.fill,
-            ),
+              Center(
+                child: new Image.asset(
+                  'assets/images/bg/drillbg.jpg',
+                  width: size.width,
+                  height: size.height,
+                  fit: BoxFit.fill,
                 ),
-                Center(
-                  child: Container(
- margin: const EdgeInsets.all(25.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      'Question ${questionNumber + 1} of ${questions.length}',
-                      style: TextStyle(
-                        fontSize: 22.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      'Score: $finalScore',
-                      style: TextStyle(fontSize: 22.0,
-                        fontWeight: FontWeight.bold,),
-                      
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Text(
-                      'Timer: $_start',
-                      style: TextStyle(
-                          fontSize: 22.0,
-                          color: _start <= 5 ? Colors.red : Colors.black,
-                            fontWeight: FontWeight.bold,),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            left: 10.0, right: 10.0, top: 45.0, bottom: 20.0),
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: 210.0,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-    image:  AssetImage('assets/img/questionboard.png'),
-    fit: BoxFit.cover,
-  ),
-                              color: Colors.blueGrey.withOpacity(0.5),
-                              borderRadius: BorderRadius.circular(10.0)),
-                              
-                          child: Text(
-                            questions[questionNumber]['questionText'],
-                            style: new TextStyle(
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30.0,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 35.0, bottom: 5.0, left: 60.0, right: 60.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            checkAnswer(
-                                questions[questionNumber]['choiceA'], 'a');
-                          },
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 55.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-    image:  AssetImage('assets/img/questionbutton.png'),
-    fit: BoxFit.cover,
-  ),
-                                //color: btnA, //Color(0xFF180191),
-                                borderRadius: BorderRadius.circular(10.0)),
-                            child: Text(
-                              questions[questionNumber]['choiceA'],
-                              style: new TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: 20.0,
-                                  color: Colors.white),
+              ),
+              Center(
+                child: Container(
+                  margin: const EdgeInsets.all(10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            'Question ${questionNumber + 1} of ${questions.length}',
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
+                          Text(
+                            'Score: $finalScore',
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
                       ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 5.0, bottom: 5.0, left: 60.0, right: 60.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            checkAnswer(
-                                questions[questionNumber]['choiceB'], 'b');
-                          },
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 55.0,
-                            decoration: BoxDecoration(
-                               image: DecorationImage(
-    image:  AssetImage('assets/img/questionbutton.png'),
-    fit: BoxFit.cover,
-  ),
-                               // color: btnB,
-                                borderRadius: BorderRadius.circular(10.0)),
-                            child: Text(
-                              questions[questionNumber]['choiceB'],
-                              style: new TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: 20.0,
-                                  color: Colors.white),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          Text(
+                            'Timer: $_start',
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              color: _start <= 5 ? Colors.red : Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
+                        ],
                       ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 5.0, bottom: 5.0, left: 60.0, right: 60.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            checkAnswer(
-                                questions[questionNumber]['choiceC'], 'c');
-                          },
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 55.0,
-                            decoration: BoxDecoration(
-                               image: DecorationImage(
-    image:  AssetImage('assets/img/questionbutton.png'),
-    fit: BoxFit.cover,
-  ),
-                               // color: btnC,
-                                borderRadius: BorderRadius.circular(10.0)),
-                            child: Text(
-                              questions[questionNumber]['choiceC'],
-                              style: new TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: 20.0,
-                                  color: Colors.white),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 10.0,
+                                  right: 10.0,
+                                  top: 45.0,
+                                  bottom: 20.0),
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 210.0,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/img/questionboard.png'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                    color: Colors.blueGrey.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                child: Text(
+                                  questions[questionNumber]['questionText'],
+                                  style: new TextStyle(
+                                      fontFamily: 'Roboto',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 30.0,
+                                      color: Colors.white),
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
+                          )
+                        ],
                       ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 2.0, left: 60.0, right: 60.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            checkAnswer(
-                                questions[questionNumber]['choiceD'], 'd');
-                          },
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 55.0,
-                            decoration: BoxDecoration(
-                               image: DecorationImage(
-    image:  AssetImage('assets/img/questionbutton.png'),
-    fit: BoxFit.cover,
-  ),
-                               // color: btnD,
-                                borderRadius: BorderRadius.circular(10.0)),
-                            child: Text(
-                              questions[questionNumber]['choiceD'],
-                              style: new TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: 20.0,
-                                  color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 35.0, bottom: 1.0, left: 240.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (_) => AssetGiffyDialog(
-                                      image: Image.asset(
-                                          'assets/img/dialoggif.gif'),
-                                      title: Text(
-                                        'STOP DRILL',
-                                        style: TextStyle(
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.w600),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 25.0,
+                                  bottom: 5.0,
+                                  left: 60.0,
+                                  right: 60.0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  checkAnswer(
+                                      questions[questionNumber]['choiceA'],
+                                      'a');
+                                },
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 55.0,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/img/questionbutton.png'),
+                                        fit: BoxFit.cover,
                                       ),
-                                      description: Text(
-                                        'Quit Polynomial Drill?',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(),
+                                      //color: btnA, //Color(0xFF180191),
+                                      borderRadius:
+                                          BorderRadius.circular(10.0)),
+                                  child: Text(
+                                    questions[questionNumber]['choiceA'],
+                                    style: new TextStyle(
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20.0,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 5.0,
+                                  bottom: 5.0,
+                                  left: 60.0,
+                                  right: 60.0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  checkAnswer(
+                                      questions[questionNumber]['choiceB'],
+                                      'b');
+                                },
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 55.0,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/img/questionbutton.png'),
+                                        fit: BoxFit.cover,
                                       ),
-                                      onOkButtonPressed: () {
-                                        
-                                        _start = 30;
-                                        _timer.cancel();
-                                        finalScore = 0;
-                                        questionNumber = 0;
-                                        pol.setPlayer(1);
-                                        Navigator.of(context).push(
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    PolyMath()));
-                                      },
-                                    ));
-                          },
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 45.0,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-    image:  AssetImage('assets/img/questionbutton.png'),
-    fit: BoxFit.cover,
-  ),
-                                color: Color(0xFF180191),
-                                borderRadius: BorderRadius.circular(50.0)),
-                            child: Icon(
-                              Icons.exit_to_app,
-                              color: Colors.white,
+                                      // color: btnB,
+                                      borderRadius:
+                                          BorderRadius.circular(10.0)),
+                                  child: Text(
+                                    questions[questionNumber]['choiceB'],
+                                    style: new TextStyle(
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20.0,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 5.0,
+                                  bottom: 5.0,
+                                  left: 60.0,
+                                  right: 60.0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  checkAnswer(
+                                      questions[questionNumber]['choiceC'],
+                                      'c');
+                                },
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 55.0,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/img/questionbutton.png'),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      // color: btnC,
+                                      borderRadius:
+                                          BorderRadius.circular(10.0)),
+                                  child: Text(
+                                    questions[questionNumber]['choiceC'],
+                                    style: new TextStyle(
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20.0,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 2.0, left: 60.0, right: 60.0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  checkAnswer(
+                                      questions[questionNumber]['choiceD'],
+                                      'd');
+                                },
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 55.0,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/img/questionbutton.png'),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      // color: btnD,
+                                      borderRadius:
+                                          BorderRadius.circular(10.0)),
+                                  child: Text(
+                                    questions[questionNumber]['choiceD'],
+                                    style: new TextStyle(
+                                        fontFamily: 'Roboto',
+                                        fontSize: 20.0,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
-                    ),
-                  ],
-                )
-              ],
-            ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 35.0, bottom: 1.0, left: 240.0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (_) => AssetGiffyDialog(
+                                            image: Image.asset(
+                                                'assets/img/dialoggif.gif'),
+                                            title: Text(
+                                              'STOP DRILL',
+                                              style: TextStyle(
+                                                  fontSize: 22.0,
+                                                  fontWeight: FontWeight.w600),
+                                            ),
+                                            description: Text(
+                                              'Quit Polynomial Drill?',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(),
+                                            ),
+                                            onOkButtonPressed: () {
+                                              _start = 30;
+                                              _timer.cancel();
+                                              finalScore = 0;
+                                              questionNumber = 0;
+                                              pol.setPlayer(1);
+                                              Navigator.of(context).push(
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          PolyMath()));
+                                            },
+                                          ));
+                                },
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 45.0,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/img/questionbutton.png'),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      color: Color(0xFF180191),
+                                      borderRadius:
+                                          BorderRadius.circular(50.0)),
+                                  child: Icon(
+                                    Icons.exit_to_app,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
-                )
-
+                ),
+              )
             ],
-           
           ),
         ));
   }
@@ -377,7 +400,7 @@ class _DrillState extends State<Drill> {
           btnD = correctColor;
         }
       });
-       Flame.audio.play('sfx/correct.mp3').then((pl) {
+      Flame.audio.play('sfx/correct.mp3').then((pl) {
         showDialog(
           context: context,
           builder: (BuildContext context) => CustomDialog(
@@ -510,7 +533,6 @@ class Summary extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async => false,
-      
       child: Scaffold(
         body: Container(
           margin: const EdgeInsets.all(25.0),
